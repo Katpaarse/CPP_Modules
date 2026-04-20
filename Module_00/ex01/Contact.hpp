@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/01 14:57:39 by jukerste          #+#    #+#             */
-/*   Updated: 2026/04/10 15:13:14 by jukerste         ###   ########.fr       */
+/*   Updated: 2026/04/20 17:53:50 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,14 @@
 #include <iostream>
 #include <string>
 
+class Contact
+{
+	private:
+	std::string _firstName;
+	
+	public:
+	void	setFirstName(std::string str);
+	void	getFirstname(void);
+};
 
 #endif

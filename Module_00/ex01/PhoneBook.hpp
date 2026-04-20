@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/01 13:33:15 by jukerste          #+#    #+#             */
-/*   Updated: 2026/04/11 17:25:55 by jukerste         ###   ########.fr       */
+/*   Updated: 2026/04/20 17:52:51 by jukerste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@
 #include <string>
 #include "Contact.hpp"
 
-class Contact
+class PhoneBook
 {
 	private:
-	std::string contacts[8];
-	public:
+	Contact _contacts[8];
 	
+	public:
+	void addContact(void);
+	void searchContact(void);
 };
 
 #endif
