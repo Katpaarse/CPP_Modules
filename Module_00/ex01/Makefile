@@ -2,22 +2,25 @@ NAME        = phonebook
 CXX         = c++
 CXXFLAGS    = -Wall -Wextra -Werror -std=c++20
 
-SRC         = 	PhoneBook.cpp \
-				Contact.cpp \
-				main.cpp \
+OBJ_DIR     = obj
 
-OBJ         = $(SRC:.cpp=.o)
+SRC         = PhoneBook.cpp \
+              Contact.cpp \
+              main.cpp
+
+OBJS        = $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+$(NAME): $(OBJS)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.cpp
+$(OBJ_DIR)/%.o: %.cpp
+	@mkdir -p $(OBJ_DIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	rm -rf $(OBJ_DIR)
 
 fclean: clean
 	rm -f $(NAME)
