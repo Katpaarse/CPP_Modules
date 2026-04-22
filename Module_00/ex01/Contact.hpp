@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jul <jul@student.42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/01 14:57:39 by jukerste          #+#    #+#             */
-/*   Updated: 2026/04/21 00:30:41 by jul              ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   Contact.hpp                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: jukerste <jukerste@student.42.fr>            +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2026/04/01 14:57:39 by jukerste      #+#    #+#                 */
+/*   Updated: 2026/04/22 15:26:21 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,13 @@ class Contact
 {
 	private:
 	std::string _firstName;
+	std::string _lastName;
 	
 	public:
 	void		setFirstName(std::string str);
 	std::string	getFirstname(void);
+	void		setLastName(std::string str);
+	std::string	getLastname(void);
 };
 
 #endif
