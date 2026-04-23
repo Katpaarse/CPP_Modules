@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/01 13:32:33 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/04/22 16:31:38 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/04/23 16:37:57 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,36 @@ void	PhoneBook::addContact(void)
 			return ;
 	}
 	_contacts[target].setLastName(input);
-	
+	input = "";
+	while (input.empty())
+	{
+		std::cout << ("Enter Nickname: ");
+		if (!std::getline(std::cin, input))
+			return ;
+	}
+	_contacts[target].setNickName(input);
+	input = "";
+	while (input.empty())
+	{
+		std::cout << ("Enter your Darkest Secret: ");
+		if (!std::getline(std::cin, input))
+			return ;
+	}
+	_contacts[target].setDarkestSecret(input);
 }
 
 void	PhoneBook::searchContact(void)
 {
-	std::string name;
+	int	i = 0;
+	
+	std::cout << "|" << std::setw(10) << "Index" << "|";
+	std::cout << "|" << std::setw(10) << "First Name" << "|";
+	std::cout << "|" << std::setw(10) << "Last Name" << "|";
+	std::cout << "|" << std::setw(10) << "Nickname" << "|" << std::endl;
+	std::cout << "------------------------------------------------" << std::endl;
+
+	while (i < 8)
+	{
+		
+	}
 }
