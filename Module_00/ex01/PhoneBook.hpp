@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/01 13:33:15 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/04/23 14:18:23 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/04/24 14:30:17 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,22 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <cctype>
+#include <cstdlib>
 #include "Contact.hpp"
 
 class PhoneBook
 {
 	private:
 	Contact 	_contacts[8];
-	std::string	_info;
+	int			_index = 0;
+	std::string	_maxString(std::string str);
+	void		_seeContactInfo(void);
+	bool		_isOnlyDigits(std::string str);
 	
 	public:
-	void addContact(void);
-	void searchContact(void);
+	void		addContact(void);
+	void		searchContact(void);
 };
 
 #endif

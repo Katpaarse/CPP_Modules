@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/22 13:44:24 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/04/23 16:35:00 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/04/23 20:41:28 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,5 @@ int	main(void)
 		else
 			std::cout << "Try something else ;)\n";
 	}
-	std::cout << std::endl;
 	return (0);
 }
