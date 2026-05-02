@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/01 13:32:33 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/04/24 14:33:42 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/05/02 16:39:07 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,12 @@
 void	PhoneBook::addContact(void)
 {
 	std::string input;
-	static int 	i = 0;
-	int			target = i % 8;
+	int			target = _index % 8;
 
 	input = "";
 	while (input.empty())
 	{
-		std::cout << ("Enter First Name: ");
+		std::cout << "Enter First Name: ";
 		if (!std::getline(std::cin, input))
 			return ;
 	}
@@ -29,7 +28,7 @@ void	PhoneBook::addContact(void)
 	input = "";
 	while (input.empty())
 	{
-		std::cout << ("Enter Last Name: ");
+		std::cout << "Enter Last Name: ";
 		if (!std::getline(std::cin, input))
 			return ;
 	}
@@ -37,7 +36,7 @@ void	PhoneBook::addContact(void)
 	input = "";
 	while (input.empty())
 	{
-		std::cout << ("Enter Nickname: ");
+		std::cout << "Enter Nickname: ";
 		if (!std::getline(std::cin, input))
 			return ;
 	}
@@ -45,12 +44,25 @@ void	PhoneBook::addContact(void)
 	input = "";
 	while (input.empty())
 	{
-		std::cout << ("Enter your Darkest Secret: ");
+		std::cout << "Enter your Darkest Secret: ";
 		if (!std::getline(std::cin, input))
 			return ;
 	}
 	_contacts[target].setDarkestSecret(input);
-	i++;
+	input = "";
+	while (input.empty() || !_validPhoneNum(input))
+	{
+		std::cout << "Enter Phone Number: ";
+		if (!std::getline(std::cin, input))
+			return ;
+		if (!input.empty() && !_validPhoneNum(input))
+		{
+			std::cout << "Not a valid Phone Number" << std::endl;
+			input = "";
+		}
+	}
+	_contacts[target].setPhoneNumber(input);
+	_index++;
 }
 
 void	PhoneBook::searchContact(void)
@@ -76,10 +88,36 @@ void	PhoneBook::searchContact(void)
 	_seeContactInfo();
 }
 
-bool		PhoneBook::_isOnlyDigits(std::string str)
+bool		PhoneBook::_validPhoneNum(std::string str)
 {
-	bool	ok = true;
+	int	i = 0;
 	
+	if (str[0] == '+')
+	{
+		if (str.length() == 1)
+			return (false);
+		i = 1;
+	}
+	while (str[i])
+	{
+		if (!std::isdigit(str[i]))
+			return (false);
+		i++;
+	}
+	return (true);
+}
+
+bool	PhoneBook::_digitsOnly(std::string str)
+{
+	int	i = 0;
+	
+	while (str[i])
+	{
+		if (!std::isdigit(str[i]))
+			return (false);
+		i++;
+	}
+	return (true);
 }
 
 std::string	PhoneBook::_maxString(std::string str)
@@ -92,10 +130,27 @@ std::string	PhoneBook::_maxString(std::string str)
 void	PhoneBook::_seeContactInfo(void)
 {
 	std::string	input;
+	int			target;
 	
-	std::cout << "Enter index to see contact info: ";
-	if (!std::getline(std::cin, input) || input.empty())
-		return ;
-	if (!_isOnlyDigits(input) || PhoneBook::_index > 7)
-		std::cout << ("pls give index 1 - 8");
+	while (input.empty())
+	{
+		std::cout << "Enter index to see contact info: ";
+		if (!std::getline(std::cin, input))
+			return ;
+		if (_digitsOnly(input))
+			target = std::atoi(input.c_str()) -1;
+		if (target >= 0 && target <= 7 && !_contacts[target].getFirstName().empty())
+		{
+			std::cout << "First Name: " << _contacts[target].getFirstName() << std::endl;
+			std::cout << "Last Name: " << _contacts[target].getLastName() << std::endl;
+			std::cout << "Nick Name: " << _contacts[target].getNickName() << std::endl;
+			std::cout << "Darkest Secret: " << _contacts[target].getDarkestSecret() << std::endl;
+			std::cout << "Phone Number: " << _contacts[target].getPhoneNumber() << std::endl << std::endl;
+		}
+		else
+		{
+			std::cout << "Index out of range. Enter a number from 1 to 8" << std::endl;
+			return ;
+		}
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/01 14:57:39 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/04/23 13:21:00 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/05/01 14:36:21 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <cctype>
 
 class Contact
 {
@@ -25,6 +26,7 @@ class Contact
 	std::string	_nickName;
 	std::string	_phoneNumber;
 	std::string _darkestSecret;
+	bool		_digitsOnly(std::string str);
 	
 	public:
 	void		setFirstName(std::string str);
