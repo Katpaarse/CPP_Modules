@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   PhoneBook.cpp                                      :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: jukerste <jukerste@student.42.fr>            +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2026/04/01 13:32:33 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/05/02 16:39:07 by jukerste      ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jul <jul@student.42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/01 13:32:33 by jukerste          #+#    #+#             */
+/*   Updated: 2026/05/03 12:14:23 by jul              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,14 +81,14 @@ void	PhoneBook::searchContact(void)
 			std::cout << "|" << std::setw(10) << i + 1 << "|";
 			std::cout << std::setw(10) << _maxString(_contacts[i].getFirstName()) << "|";
 			std::cout << std::setw(10) << _maxString(_contacts[i].getLastName()) << "|";
-			std::cout << std::setw(10) << _maxString(_contacts[i].getNickName()) << "|" << std::endl;
+			std::cout << std::setw(10) << _maxString(_contacts[i].getNickName()) << "|" << std::endl << std::endl;
 		}
 		i++;
 	}
 	_seeContactInfo();
 }
 
-bool		PhoneBook::_validPhoneNum(std::string str)
+bool	PhoneBook::_validPhoneNum(std::string str)
 {
 	int	i = 0;
 	
@@ -134,7 +134,7 @@ void	PhoneBook::_seeContactInfo(void)
 	
 	while (input.empty())
 	{
-		std::cout << "Enter index to see contact info: ";
+		std::cout << "Enter index to see contact info: " << std::endl;
 		if (!std::getline(std::cin, input))
 			return ;
 		if (_digitsOnly(input))
@@ -149,7 +149,7 @@ void	PhoneBook::_seeContactInfo(void)
 		}
 		else
 		{
-			std::cout << "Index out of range. Enter a number from 1 to 8" << std::endl;
+			std::cout << "Index out of range, pls try again" << std::endl;
 			return ;
 		}
 	}

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: jukerste <jukerste@student.42.fr>            +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2026/04/22 13:44:24 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/04/23 20:41:28 by jukerste      ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jul <jul@student.42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/22 13:44:24 by jukerste          #+#    #+#             */
+/*   Updated: 2026/05/03 12:16:37 by jul              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(void)
 	
 	while (1)
 	{
-		std::cout << "Enter: ADD, SEARCH, EXIT \n";
+		std::cout << "Enter: ADD, SEARCH, EXIT" << std::endl;
 		if (!std::getline(std::cin, cmd))
 			break ;
 		if (cmd == "ADD")
@@ -29,7 +29,7 @@ int	main(void)
 		else if (cmd == "EXIT")
 			break ;
 		else
-			std::cout << "Try something else ;)\n";
+			std::cout << "Try something else ;)" << std::endl;
 	}
 	return (0);
 }
