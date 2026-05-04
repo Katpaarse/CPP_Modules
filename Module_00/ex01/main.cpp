@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jul <jul@student.42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/22 13:44:24 by jukerste          #+#    #+#             */
-/*   Updated: 2026/05/03 12:16:37 by jul              ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   main.cpp                                           :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: jul <jul@student.42.fr>                      +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2026/04/22 13:44:24 by jukerste      #+#    #+#                 */
+/*   Updated: 2026/05/04 13:55:12 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,15 @@ int	main(void)
 		if (!std::getline(std::cin, cmd))
 			break ;
 		if (cmd == "ADD")
-			MyBook.addContact();
+		{
+			if (MyBook.addContact() == false)
+				break ;
+		}
 		else if (cmd == "SEARCH")
-			MyBook.searchContact();
+		{
+			if (MyBook.searchContact() == false)
+				break ;
+		}
 		else if (cmd == "EXIT")
 			break ;
 		else

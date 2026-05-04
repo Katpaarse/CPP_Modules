@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/01 13:33:15 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/05/02 16:21:49 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/05/04 13:52:47 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ class PhoneBook
 	bool		_digitsOnly(std::string str);
 	
 	public:
-	void		addContact(void);
-	void		searchContact(void);
+	bool		addContact(void);
+	bool		searchContact(void);
 };
 
 #endif

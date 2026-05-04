@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jul <jul@student.42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/01 13:32:33 by jukerste          #+#    #+#             */
-/*   Updated: 2026/05/03 12:14:23 by jul              ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   PhoneBook.cpp                                      :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: jul <jul@student.42.fr>                      +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2026/04/01 13:32:33 by jukerste      #+#    #+#                 */
+/*   Updated: 2026/05/04 13:57:20 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-void	PhoneBook::addContact(void)
+bool	PhoneBook::addContact(void)
 {
 	std::string input;
 	int			target = _index % 8;
@@ -22,7 +22,7 @@ void	PhoneBook::addContact(void)
 	{
 		std::cout << "Enter First Name: ";
 		if (!std::getline(std::cin, input))
-			return ;
+			return (false);
 	}
 	_contacts[target].setFirstName(input);
 	input = "";
@@ -30,7 +30,7 @@ void	PhoneBook::addContact(void)
 	{
 		std::cout << "Enter Last Name: ";
 		if (!std::getline(std::cin, input))
-			return ;
+			return (false);
 	}
 	_contacts[target].setLastName(input);
 	input = "";
@@ -38,7 +38,7 @@ void	PhoneBook::addContact(void)
 	{
 		std::cout << "Enter Nickname: ";
 		if (!std::getline(std::cin, input))
-			return ;
+			return (false);
 	}
 	_contacts[target].setNickName(input);
 	input = "";
@@ -46,15 +46,15 @@ void	PhoneBook::addContact(void)
 	{
 		std::cout << "Enter your Darkest Secret: ";
 		if (!std::getline(std::cin, input))
-			return ;
+			return (false);
 	}
 	_contacts[target].setDarkestSecret(input);
 	input = "";
-	while (input.empty() || !_validPhoneNum(input))
+	while (input.empty())
 	{
 		std::cout << "Enter Phone Number: ";
 		if (!std::getline(std::cin, input))
-			return ;
+			return (false);
 		if (!input.empty() && !_validPhoneNum(input))
 		{
 			std::cout << "Not a valid Phone Number" << std::endl;
@@ -63,9 +63,10 @@ void	PhoneBook::addContact(void)
 	}
 	_contacts[target].setPhoneNumber(input);
 	_index++;
+	return (true);
 }
 
-void	PhoneBook::searchContact(void)
+bool	PhoneBook::searchContact(void)
 {
 	std::cout << "|" << std::setw(10) << "INDEX";
 	std::cout << "|" << std::setw(10) << "FIRST NAME";
@@ -81,11 +82,12 @@ void	PhoneBook::searchContact(void)
 			std::cout << "|" << std::setw(10) << i + 1 << "|";
 			std::cout << std::setw(10) << _maxString(_contacts[i].getFirstName()) << "|";
 			std::cout << std::setw(10) << _maxString(_contacts[i].getLastName()) << "|";
-			std::cout << std::setw(10) << _maxString(_contacts[i].getNickName()) << "|" << std::endl << std::endl;
+			std::cout << std::setw(10) << _maxString(_contacts[i].getNickName()) << "|" << std::endl;
 		}
 		i++;
 	}
 	_seeContactInfo();
+	return (true);
 }
 
 bool	PhoneBook::_validPhoneNum(std::string str)
