@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   Zombie.hpp                                         :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2026/05/04 14:17:42 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/05/04 15:00:49 by jukerste      ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jul <jul@student.42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/04 14:17:42 by jukerste          #+#    #+#             */
+/*   Updated: 2026/05/04 18:29:43 by jul              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,15 @@
 class Zombie
 {
 	private:
-	void	announce(void);
+		std::string	_name;
 	
 	public:
-	Zombie* newZombie(std::string name);
-	void 	randomChump(std::string name);
-	
+		void	announce(void);
+		Zombie(std::string name);
+		~Zombie(void);
 };
+
+Zombie* newZombie(std::string name);
+void 	randomChump(std::string name);
 
 #endif

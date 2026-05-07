@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   randomChump.cpp                                    :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2026/05/04 14:17:36 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/05/04 15:00:25 by jukerste      ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jul <jul@student.42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/04 14:17:36 by jukerste          #+#    #+#             */
+/*   Updated: 2026/05/04 18:32:58 by jul              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void Zombie::randomChump(std::string name)
+void randomChump(std::string name)
 {
 	
 }
