@@ -6,13 +6,13 @@
 /*   By: jul <jul@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 14:17:32 by jukerste          #+#    #+#             */
-/*   Updated: 2026/05/04 18:33:06 by jul              ###   ########.fr       */
+/*   Updated: 2026/05/11 16:28:51 by jul              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie* newZombie(std::string name)
-{
+// Zombie* newZombie(std::string name)
+// {
 	
-}
+// }

@@ -6,13 +6,13 @@
 /*   By: jul <jul@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 14:17:36 by jukerste          #+#    #+#             */
-/*   Updated: 2026/05/04 18:32:58 by jul              ###   ########.fr       */
+/*   Updated: 2026/05/11 16:29:30 by jul              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void randomChump(std::string name)
-{
+// void randomChump(std::string name)
+// {
 	
-}
+// }
