@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Zombie.hpp                                         :+:    :+:            */
+/*   main.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: jul <jul@student.42.fr>                      +#+                     */
+/*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2026/05/04 14:17:42 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/05/12 13:33:25 by jukerste      ########   odam.nl         */
+/*   Created: 2026/05/12 16:21:02 by jukerste      #+#    #+#                 */
+/*   Updated: 2026/05/12 16:29:51 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
 
 #include <iostream>
 #include <string>
 
-class Zombie
+int	main(void)
 {
-	private:
-		std::string	_name;
-	
-	public:
-		Zombie(std::string name);
-		~Zombie(void);
-		void	announce(void);
-};
-
-Zombie* newZombie(std::string name);
-void 	randomChump(std::string name);
-
-#endif
+	std::string		str = "HI THIS IS BRAIN";
+	std::string*	stringPTR = &str;
+	std::string&	stringREF = str;
+	std::cout << &str << std::endl;
+	std::cout << stringPTR << std::endl;
+	std::cout << &stringREF << std::endl;
+	return (0);
+}

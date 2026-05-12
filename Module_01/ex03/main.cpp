@@ -1,19 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   newZombie.cpp                                      :+:    :+:            */
+/*   main.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: jul <jul@student.42.fr>                      +#+                     */
+/*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2026/05/04 14:17:32 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/05/12 13:41:04 by jukerste      ########   odam.nl         */
+/*   Created: 2026/05/12 17:05:16 by jukerste      #+#    #+#                 */
+/*   Updated: 2026/05/12 17:05:17 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-
-Zombie* newZombie(std::string name)
-{
-	Zombie*	allocZombie = new Zombie(name);
-	return (allocZombie);
-}

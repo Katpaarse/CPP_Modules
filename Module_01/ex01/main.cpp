@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   newZombie.cpp                                      :+:    :+:            */
+/*   main.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: jul <jul@student.42.fr>                      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2026/05/04 14:17:32 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/05/12 13:41:04 by jukerste      ########   odam.nl         */
+/*   Created: 2026/05/04 14:17:29 by jukerste      #+#    #+#                 */
+/*   Updated: 2026/05/12 16:10:19 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie* newZombie(std::string name)
+int	main(void)
 {
-	Zombie*	allocZombie = new Zombie(name);
-	return (allocZombie);
+	int	N = 5;
+	std::string	name = "Zombie from the horde";
+	std::cout << "Creating a horde of " << N << " zombies" << std::endl;
+	Zombie * horde = zombieHorde(N, name);
+	int	i = 0;
+	while (i < N)
+	{
+		std::cout << i + 1 << ": ";
+		horde[i].announce();
+		i++;
+	}
+	std::cout << "Sending zombies back to the void" << std::endl;
+	delete [] horde;
+	return (0); 
 }
