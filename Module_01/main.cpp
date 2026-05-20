@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Weapon.hpp                                         :+:    :+:            */
+/*   main.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2026/05/15 14:35:46 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/05/18 16:31:30 by jukerste      ########   odam.nl         */
+/*   Created: 2026/05/18 17:05:59 by jukerste      #+#    #+#                 */
+/*   Updated: 2026/05/18 17:12:36 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "FileReplacer.hpp"
 
-#include <string>
-#include <iostream>
-
-class Weapon
+int	main(int argc, char **argv)
 {
-	private:
-		std::string	_type;
-	public:
-		Weapon(std::string type);
-		~Weapon(void);
-		void	setType(std::string type);
-		const std::string& getType(void);
-};
+	if (argc != 4)
+	{
+		std::cerr << "invalid arguments given to the program" << std::endl;
+		return (1);
+	}
+	return (0);
+}

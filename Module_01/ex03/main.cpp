@@ -6,11 +6,13 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/05/12 17:05:16 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/05/15 14:26:48 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/05/18 16:34:42 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int	main(void)
 {

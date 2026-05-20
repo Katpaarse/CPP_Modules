@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Weapon.hpp                                         :+:    :+:            */
+/*   FileReplacer.hpp                                   :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2026/05/15 14:35:46 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/05/18 16:31:30 by jukerste      ########   odam.nl         */
+/*   Created: 2026/05/18 17:03:55 by jukerste      #+#    #+#                 */
+/*   Updated: 2026/05/18 17:05:36 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 #include <string>
 #include <iostream>
+#include <fstream>
 
-class Weapon
+class FileReplacer
 {
-	private:
-		std::string	_type;
-	public:
-		Weapon(std::string type);
-		~Weapon(void);
-		void	setType(std::string type);
-		const std::string& getType(void);
+private:
+	
+public:
+	FileReplacer();
+	~FileReplacer();
 };
