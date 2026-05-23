@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/05/18 17:05:59 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/05/18 17:12:36 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/05/23 15:32:21 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@ int	main(int argc, char **argv)
 {
 	if (argc != 4)
 	{
-		std::cerr << "invalid arguments given to the program" << std::endl;
+		std::cerr << "Invalid arguments given to the program" << std::endl;
 		return (1);
 	}
-	return (0);
+	FileReplacer replacer(argv[1], argv[2], argv[3]);
+	return replacer.execute();
 }

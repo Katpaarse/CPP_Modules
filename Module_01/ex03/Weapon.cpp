@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/05/15 14:22:01 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/05/15 16:31:59 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/05/21 16:16:43 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Weapon::~Weapon(void)
 
 void Weapon::setType(std::string type)
 {
-	this->_type = type;
+	_type = type;
 }
 
 const std::string& Weapon::getType(void)
