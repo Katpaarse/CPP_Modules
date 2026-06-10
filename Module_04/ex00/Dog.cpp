@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
+/*   Dog.cpp                                            :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2026/05/12 17:05:16 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/06/08 19:14:23 by jukerste      ########   odam.nl         */
+/*   Created: 2026/06/08 15:03:07 by jukerste      #+#    #+#                 */
+/*   Updated: 2026/06/10 16:38:51 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include "Dog.hpp"
 
-int	main(void)
+Dog::Dog()
 {
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
-	{
-		Weapon club = Weapon("");
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
-	return (0);
+	this->_type = "Dog";
+	std::cout << this->_type << " is being created.." << std::endl;
+}
+
+Dog::~Dog()
+{
+	std::cout << "Destructor for dog is called.." << std::endl;
+}
+
+void	Dog::makeSound() const
+{
+	std::cout << " *WOOF WOOF*" << std::endl;
+}
+
+std::string Dog::getType() const
+{
+	return (this->_type);
 }

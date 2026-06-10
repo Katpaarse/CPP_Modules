@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
+/*   WrongCat.cpp                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2026/05/12 17:05:16 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/06/08 19:14:23 by jukerste      ########   odam.nl         */
+/*   Created: 2026/06/08 15:03:22 by jukerste      #+#    #+#                 */
+/*   Updated: 2026/06/10 16:39:27 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include "WrongCat.hpp"
 
-int	main(void)
+WrongCat::WrongCat()
 {
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
-	{
-		Weapon club = Weapon("");
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
-	return (0);
+	this->_type = "Wrong Cat";
+	std::cout << this->_type << " is being created.." << std::endl;
+}
+
+WrongCat::~WrongCat()
+{
+	std::cout << "Destructor for wrong cat is called.." << std::endl; 
+}
+
+void	WrongCat::makeSound()const
+{
+	std::cout << "*BZZZZ*" << std::endl;
+}
+
+std::string	WrongCat::getType() const
+{
+	return (this->_type);
 }
