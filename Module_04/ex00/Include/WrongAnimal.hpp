@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/08 15:07:52 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/06/10 16:01:38 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/06/23 00:47:26 by jul           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 #include "Animal.hpp"
 
-class WrongAnimal : public Animal
+class WrongAnimal
 {
+	protected:
+		std::string _type;
 	public:
 		WrongAnimal();
 		~WrongAnimal();

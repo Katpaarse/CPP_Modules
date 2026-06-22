@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/08 15:08:53 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/06/10 16:59:48 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/06/23 00:53:05 by jul           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,4 @@ class WrongCat : public WrongAnimal
 		WrongCat();
 		~WrongCat();
 		void makeSound() const;
-		std::string getType() const;
 };

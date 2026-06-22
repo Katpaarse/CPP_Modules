@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/08 13:37:06 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/06/10 16:38:33 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/06/23 00:54:21 by jul           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 Animal::Animal()
 {
-	this->_type = "Generic Animal";
-	std::cout << this->_type << " is being created.." << std::endl;
+	_type = "Generic Animal";
+	std::cout << _type << " is being created.." << std::endl;
 }
 
 Animal::~Animal()
@@ -30,5 +30,5 @@ void	Animal::makeSound() const
 
 std::string	Animal::getType() const
 {
-	return (this->_type);
+	return (_type);
 }

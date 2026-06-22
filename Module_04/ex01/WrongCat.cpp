@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/08 15:03:22 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/06/10 16:39:27 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/06/23 01:04:23 by jul           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 WrongCat::WrongCat()
 {
-	this->_type = "Wrong Cat";
-	std::cout << this->_type << " is being created.." << std::endl;
+	_type = "Wrong Cat";
+	std::cout << _type << " is being created.." << std::endl;
 }
 
 WrongCat::~WrongCat()
@@ -30,5 +30,5 @@ void	WrongCat::makeSound()const
 
 std::string	WrongCat::getType() const
 {
-	return (this->_type);
+	return (_type);
 }

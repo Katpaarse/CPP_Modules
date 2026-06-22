@@ -6,15 +6,13 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/08 13:36:41 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/06/12 18:11:08 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/06/23 01:10:34 by jul           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
 #include "Brain.hpp"
 
 int main(void)

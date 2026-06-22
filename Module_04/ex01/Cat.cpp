@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/08 14:06:44 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/06/12 16:56:54 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/06/23 01:02:43 by jul           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 Cat::Cat()
 {
-	this->_type = "Cat";
-	this->_brain = new Brain();
-	std::cout << this->_type << " is being created.." << std::endl;
+	_type = "Cat";
+	_brain = new Brain();
+	std::cout << _type << " is being created.." << std::endl;
 }
 
 Cat::Cat(const Cat &src) : Animal(src)
 {
 	std::cout << "Cat copy constructor is called.." << std::endl;
-	this->_type = src._type;
-	this->_brain = new Brain();
-	*(this->_brain) = *(src._brain);
+	_type = src._type;
+	_brain = new Brain();
+	*(_brain) = *(src._brain);
 }
 
 Cat& Cat::operator=(const Cat &src)
@@ -32,18 +32,18 @@ Cat& Cat::operator=(const Cat &src)
 	std::cout << "Cat assignment copy operator is called.." << std::endl;
 	if (this != &src)
 	{
-		this->_type = src._type;
-		if (this->_brain)
-			delete this->_brain;
-		this->_brain = new Brain();
-		*(this->_brain) = *(src._brain);
+		_type = src._type;
+		if (_brain)
+			delete _brain;
+		_brain = new Brain();
+		*(_brain) = *(src._brain);
 	}
 	return (*this);
 }
 
 Cat::~Cat()
 {
-	delete this->_brain;
+	delete _brain;
 	std::cout << "Destructor for cat is called, brain memory is freed.." << std::endl;
 }
 
@@ -54,5 +54,5 @@ void	Cat::makeSound() const
 
 std::string	Cat::getType() const
 {
-	return (this->_type);
+	return (_type);
 }

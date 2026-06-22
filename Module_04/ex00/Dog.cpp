@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/08 15:03:07 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/06/10 16:38:51 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/06/23 00:39:29 by jul           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 Dog::Dog()
 {
-	this->_type = "Dog";
-	std::cout << this->_type << " is being created.." << std::endl;
+	_type = "Dog";
+	std::cout << _type << " is being created.." << std::endl;
 }
 
 Dog::~Dog()
@@ -30,5 +30,5 @@ void	Dog::makeSound() const
 
 std::string Dog::getType() const
 {
-	return (this->_type);
+	return (_type);
 }

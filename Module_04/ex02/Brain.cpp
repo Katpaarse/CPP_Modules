@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/12 15:23:18 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/06/12 15:39:22 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/06/23 01:05:21 by jul           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Brain& Brain::operator=(const Brain &src)
 		int i = 0;
 		while (i < 100)
 		{
-			this->_ideas[i] = src._ideas[i];
+			_ideas[i] = src._ideas[i];
 			i++;
 		}
 	}

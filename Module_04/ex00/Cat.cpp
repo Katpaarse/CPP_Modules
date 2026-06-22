@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/08 14:06:44 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/06/10 16:39:12 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/06/23 00:39:13 by jul           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 Cat::Cat()
 {
-	this->_type = "Cat";
-	std::cout << this->_type << " is being created.." << std::endl;
+	_type = "Cat";
+	std::cout << _type << " is being created.." << std::endl;
 }
 
 Cat::~Cat()
@@ -30,5 +30,5 @@ void	Cat::makeSound() const
 
 std::string	Cat::getType() const
 {
-	return (this->_type);
+	return (_type);
 }
