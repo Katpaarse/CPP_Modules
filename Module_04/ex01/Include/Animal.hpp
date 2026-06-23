@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/08 13:36:43 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/06/10 14:19:19 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/06/23 17:45:28 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ class Animal
 		std::string _type;
 	public:
 		Animal();
+		Animal(const Animal &src);
+		Animal& operator=(const Animal &src);
 		virtual ~Animal();
 		virtual void makeSound() const;
 		std::string getType() const;

@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/08 14:06:44 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/06/23 01:06:25 by jul           ########   odam.nl         */
+/*   Updated: 2026/06/23 17:55:23 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,4 @@ Cat::~Cat()
 void	Cat::makeSound() const
 {
 	std::cout << "Cat says: *MEOW*" << std::endl;
-}
-
-std::string	Cat::getType() const
-{
-	return (_type);
 }

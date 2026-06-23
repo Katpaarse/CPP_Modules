@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/08 15:05:05 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/06/12 15:50:40 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/06/23 17:48:58 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,4 @@ class Dog : public Animal
 		Dog &operator=(const Dog &src);
 		virtual ~Dog();
 		void makeSound(void) const;
-		std::string getType() const;
 };

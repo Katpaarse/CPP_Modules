@@ -1,19 +1,19 @@
 NAME        = Poly
 CXX         = c++
 INCLUDEDIR	= Include
-CXXFLAGS    = -Wall -Wextra -Werror -std=c++20 -I $(INCLUDEDIR)
+CXXFLAGS    = -Wall -Wextra -Werror -std=c++20 -I $(INCLUDEDIR) -MD
 
 OBJ_DIR     = obj
 
 SRC         = Animal.cpp \
 			  Dog.cpp \
 			  Cat.cpp \
-			  WrongAnimal.cpp \
-			  WrongCat.cpp \
 			  Brain.cpp \
               main.cpp
 
 OBJS        = $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
+
+DEPS        = $(OBJS:.o=.d)
 
 all: $(NAME)
 
@@ -31,5 +31,7 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+-include $(DEPS)
 
 .PHONY: all clean fclean re

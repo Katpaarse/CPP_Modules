@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/08 14:08:42 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/06/10 16:01:45 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/06/23 16:42:21 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ class Cat : public Animal
 {
 	public:
 		Cat();
+		Cat(const Cat &src);
+		Cat& operator=(const Cat &src);
 		~Cat();
 		void makeSound() const;
-		std::string getType() const;
 };

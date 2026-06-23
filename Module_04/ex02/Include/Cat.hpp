@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/06/08 14:08:42 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/06/12 15:51:26 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/06/23 17:55:31 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,4 @@ class Cat : public Animal
 		Cat &operator=(const Cat &src);
 		virtual ~Cat();
 		void makeSound() const;
-		std::string getType() const;
 };
