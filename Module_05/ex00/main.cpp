@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/08/07 14:29:09 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/08/07 18:13:23 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/08/07 18:21:13 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	main()
     {
         std::cout << "Exception caught: " << e.what() << std::endl;
     }
-    std::cout << "\nTEST 5: Decrementing to the absolute limit (Grade: 149 + 1 = 150 + 1)" << std::endl;
+    std::cout << "\nTEST 5: Decrementing to the limit (Grade: 149 + 1 = 150 + 1)" << std::endl;
     try
     {
         Bureaucrat charlie("Charlie", 149);
