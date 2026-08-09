@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/07/17 14:06:09 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/08/09 17:00:37 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/08/09 16:59:44 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Bureaucrat
 			public:
 			virtual const char* what() const noexcept
 			{
-				return ("Bureaucrat grade is too low! Min grade is 150");
+				return ("Bureaucrat grade is too low! Max grade is 150");
 			}	
 		};
 		
