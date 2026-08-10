@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/07/17 14:06:09 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/08/09 16:59:44 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/08/10 17:06:06 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ class Bureaucrat
 		~Bureaucrat();
 		
 		std::string const getName() const;
-		int getGrade() const;
+		int	getGrade() const;
 };
 
 std::ostream& operator<<(std::ostream& output, Bureaucrat const& toPrint);

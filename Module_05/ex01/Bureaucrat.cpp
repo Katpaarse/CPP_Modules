@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/07/17 14:06:29 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/08/07 17:47:31 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/08/10 17:12:15 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,8 @@ void Bureaucrat::decrementGrade()
 	_grade++;
 }
 
-std::ostream& operator<<(std::ostream& outputStream, Bureaucrat const & toPrint)
+std::ostream& operator<<(std::ostream& output, Bureaucrat const & toPrint)
 {
-	outputStream << toPrint.getName() << ", bureaucrat grade: " << toPrint.getGrade() << ".";
-	return (outputStream);
+	output << toPrint.getName() << ", bureaucrat grade: " << toPrint.getGrade() << ".";
+	return (output);
 }
