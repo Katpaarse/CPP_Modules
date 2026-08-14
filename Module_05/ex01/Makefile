@@ -1,4 +1,4 @@
-NAME        = Buro
+NAME        = Forms
 CXX         = c++
 INCLUDEDIR	= Include
 CXXFLAGS    = -Wall -Wextra -Werror -std=c++20 -I $(INCLUDEDIR) -MD

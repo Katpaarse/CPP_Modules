@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/08/09 16:12:48 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/08/10 17:22:20 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/08/12 17:00:32 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,3 +53,5 @@ class Form
 		
 		void				beSigned(Bureaucrat const &bureaucrat);
 };
+
+std::ostream& operator<<(std::ostream& output, Form const& toPrint);
