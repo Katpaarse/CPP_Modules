@@ -6,12 +6,12 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/07/17 14:06:29 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/08/18 00:43:05 by jul           ########   odam.nl         */
+/*   Updated: 2026/08/19 19:00:38 by jul           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 Bureaucrat::Bureaucrat() : _name("Default"), _grade(150)
 {
@@ -75,7 +75,7 @@ std::ostream& operator<<(std::ostream& output, Bureaucrat const & toPrint)
 	return (output);
 }
 
-void Bureaucrat::signForm(Form &form)
+void Bureaucrat::signForm(AForm &form)
 {
 	try
 	{
@@ -86,4 +86,17 @@ void Bureaucrat::signForm(Form &form)
 	{
 		std::cout << _name << " could not sign " << form.getName() << " because " << e.what() << std::endl;
 	}	
+}
+
+void Bureaucrat::executeForm(AForm const &form)
+{
+	try
+	{
+		form.execute(*this);
+		std::cout << _name << " executed " << form.getName() << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cout << _name << " could not execute " << form.getName() << " because: " << e.what() << std::endl;
+	}
 }

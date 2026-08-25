@@ -6,12 +6,12 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/08/07 14:29:09 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/08/18 00:47:43 by jul           ########   odam.nl         */
+/*   Updated: 2026/08/19 16:57:01 by jul           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 int	main(void)
 {
