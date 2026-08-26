@@ -8,7 +8,9 @@ OBJ_DIR     = obj
 SRC         = main.cpp \
 			  Bureaucrat.cpp \
 			  AForm.cpp \
-
+			  ShrubberyCreationForm.cpp \
+			  RobotomyRequestForm.cpp \
+			  PresidentialPardonForm.cpp \
 
 OBJS        = $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 

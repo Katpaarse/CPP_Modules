@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/07/17 14:06:09 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/08/19 18:59:24 by jul           ########   odam.nl         */
+/*   Updated: 2026/08/25 14:59:05 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <string>
 #include <exception>
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
