@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/08/07 14:29:09 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/08/26 17:16:54 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/08/26 17:17:55 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int	main(void)
 	}
 	catch(std::exception &e)
 	{
-		std::cout << "Exception caught: " <<  e.what() << std::endl;
+		std::cout << "Exception caught: " << e.what() << std::endl;
 	}
     return (0);
 }
