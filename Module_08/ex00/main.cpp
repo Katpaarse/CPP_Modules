@@ -6,7 +6,7 @@
 /*   By: jukerste <jukerste@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/09/22 15:50:54 by jukerste      #+#    #+#                 */
-/*   Updated: 2026/09/25 16:50:14 by jukerste      ########   odam.nl         */
+/*   Updated: 2026/10/05 16:03:30 by jukerste      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-	std::cout << "Testing with std::vector" << std::endl;
+	std::cout << "\nTesting with std::vector" << std::endl;
 	std::vector<int> vec;
 	vec.push_back(10);
 	vec.push_back(20);
